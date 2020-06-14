@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <h4>Welcome to Flask Web Scraping </h4>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <input type="text" class="form-control" name="search" placeholder="Search for Everything">
+        </div>
+        <div>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Search
+<!--                <i class="material-icons right">send</i>-->
+              </button>
+        </div>
+    </form>
+</div>
+<div class="container">
+     <div class="row">
+                {% for i in message %}
+                <div class="col s4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <a href="https://www.youtube.com/watch?v={{i['id']}}"><img class="activator" width="200" height="250" src="{{i['video_image']}}"></a>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator black-text text-darken-5">{{i['video_title']}}<i class="material-icons right">more_vert</i></span>
+                        <div>
+                            <a href="/get_more/{{i['channelId']}}/{{search}}/{{i['id']}}">View More</a>
+                        </div>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                      <p>{{i['video_description']}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+</div>
+
+
+{% endblock %}

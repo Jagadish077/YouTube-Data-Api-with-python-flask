@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <style>
+         .card-title{
+         font-size: 10px !important;
+         }
+         .col{
+         margin-bottom: 4;
+         }
+         body {
+         display: flex;
+         min-height: 100vh;
+         flex-direction: column;
+         }
+         main {
+         flex: 1 0 auto;
+         }
+      </style>
+   </head>
+   <body>
+      <nav>
+         <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+               <li><a href="/">Home</a></li>
+               <li><a href="badges.html">Components</a></li>
+               <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+         </div>
+      </nav>
+      {% block content %}
+      {% endblock %}
+      <script type="text/javascript" src="{{url_for('static', filename='materialize/js/materialize.min.js')}}"></script>
+   </body>
+</html>
