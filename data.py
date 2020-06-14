@@ -1,8 +1,7 @@
 from googleapiclient.discovery import build
 
-kumar_api = 'AIzaSyDgET9XthaNo24ZxAE7HIhAGouaeaU5Wl4'
-api_key = "AIzaSyDs3np7cQSrWdAt_NEpJ9_3fHVB7q3S554"
-final = build('youtube', 'v3', developerKey=kumar_api)
+api_key = "Your API Key"
+final = build('youtube', 'v3', developerKey=api_key)
 
 
 class YouTubeData:
